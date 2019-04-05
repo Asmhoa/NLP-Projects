@@ -1,4 +1,4 @@
-# Edited from https://github.com/allenai/allennlp/blob/master/tutorials/getting_started/predicting_paper_venues/predicting_paper_venues_pt1.md
+# Inspired from https://github.com/allenai/allennlp/blob/master/tutorials/getting_started/predicting_paper_venues/predicting_paper_venues_pt1.md
 
 from typing import Dict, Optional
 
@@ -19,7 +19,7 @@ class SentimentClassifier(Model):
     def __init__(self,
                 vocab: Vocabulary,
                 text_field_embedder: TextFieldEmbedder,
-                sentence_encoder: Seq2VecEncoder, # specify this as RNN
+                sentence_encoder: Seq2VecEncoder, # specify this as RNN in config
                 classifier_feedforward: FeedForward) -> None:
         super(SentimentClassifier, self).__init__(vocab)
 
@@ -35,7 +35,6 @@ class SentimentClassifier(Model):
 
         self.loss = torch.nn.CrossEntropyLoss()
 
-    # @overrides
     def forward(self,
                 tokens: Dict[str, torch.LongTensor],
                 label: torch.LongTensor = None) -> Dict[str, torch.Tensor]:
@@ -43,11 +42,8 @@ class SentimentClassifier(Model):
         sentence_mask = util.get_text_field_mask(tokens)
         encoded_sentence = self.sentence_encoder(embedded_sentence, sentence_mask)
 
-        # TODO: ask about DIMS and what is input_size in encoder for config file
-        # original: logits = self.classifier_feedforward(encoded_sentence, dim=-1)
         logits = self.classifier_feedforward(encoded_sentence)
 
-        # original: class_probabilities = F.softmax(logits, dim = -1)
         class_probabilities = F.softmax(logits, dim = -1)
 
         output_dict = {"class_probabilities": class_probabilities}
@@ -60,7 +56,6 @@ class SentimentClassifier(Model):
 
         return output_dict
 
-    # @overrides 
     def get_metrics(self, reset: bool = False) -> Dict[str, float]:
         return {metric_name: metric.get_metric(reset) for metric_name, metric in self.metrics.items()}
 

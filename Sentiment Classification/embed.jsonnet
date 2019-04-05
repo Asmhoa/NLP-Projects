@@ -1,18 +1,12 @@
-// Starter configuration for CSE 447/547M A2.
-// ==========================================
-
 {
   // Pretrained embedding links
   // ==========================
   //
   // * Sections 1 and 2 *
   // Please use the Google News word2vec 300D pretrained embeddings, which
-  // are locally accessible from aziak/attu at:
-  //     /cse/web/courses/cse447/19wi/assignments/resources/word2vec/GoogleNews-vectors-negative300.txt.gz
-  // and remotely at:
+  // are available remotely at:
   //     https://s3-us-west-2.amazonaws.com/allennlp/datasets/word2vec/GoogleNews-vectors-negative300.txt.gz
   //
-
 
   // Stanford Sentiment Treebank configuration
   // =========================================

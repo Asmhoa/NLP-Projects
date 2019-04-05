@@ -1,3 +1,5 @@
+# Provided as part of a project skeleton by the CSE 447 WI19 staff at UW
+
 from typing import Dict
 from overrides import overrides
 

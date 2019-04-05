@@ -1,3 +1,5 @@
+# Provided as part of a project skeleton by the CSE 447 WI19 staff at UW
+
 from overrides import overrides
 
 from allennlp.common.util import JsonDict
@@ -23,9 +25,6 @@ class SentimentPredictor(Predictor):
 
     @overrides
     def load_line(self, line: str) -> JsonDict:
-        # Since we don't have any input fields besides the sentence itself,
-        # it doesn't really make sense to pack things in json -- just have each
-        # input line be a sentence we want to classify.
         return {'text': line}
 
     @overrides
