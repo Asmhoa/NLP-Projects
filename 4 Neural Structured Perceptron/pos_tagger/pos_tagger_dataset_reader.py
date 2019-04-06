@@ -1,3 +1,4 @@
+# Provided by CSE 447 WI19 Staff at the University of Washington
 from typing import Dict, Tuple, List
 import logging
 

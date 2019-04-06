@@ -1,3 +1,4 @@
+# Provided by CSE 447 WI19 Staff at the University of Washington
 from overrides import overrides
 
 from allennlp.common.util import JsonDict

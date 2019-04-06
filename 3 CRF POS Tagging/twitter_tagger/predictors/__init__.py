@@ -1,0 +1,1 @@
+from twitter_tagger.predictors.predictor import PartsOfSpeechPredictor

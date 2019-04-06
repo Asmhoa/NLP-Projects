@@ -1,3 +1,6 @@
+# Script to create confusion matrix
+# Using PyTorch example from docs
+
 import sys
 import itertools
 import numpy as np
