@@ -16,7 +16,7 @@ This is a collection of projects I completed as part of my Natural Language Proc
         - RNN
         - LSTM
         - GRU
-        - Word Embeddings
+        - Transformers
 + Text Classification
     - Naive Bayes
     - Log Loss
@@ -26,6 +26,7 @@ This is a collection of projects I completed as part of my Natural Language Proc
     - word2vec
     - skip-gram
     - ELMo
+    - BERT
     - LSI/A (did not fully understand)
 +  Sequence Labelling
     - Hidden Markov Models
@@ -44,7 +45,7 @@ This is a collection of projects I completed as part of my Natural Language Proc
     - Bitext
     - IBM Model 1/2
     - Scoring Translations
-    - Attention (did not understand well)
+    - Attention
 + Semantics
     - Thematic role labelling
 
